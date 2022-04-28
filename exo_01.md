@@ -56,18 +56,8 @@ Réponse obtenue
 
 Requête SQL
 
-    SELECT albums.Title 
-    FROM albums 
-    WHERE albums.Title LIKE '%music%'
+    DELETE FROM albums WHERE Title LIKE '%music%';
 
-Réponse obtenue
-
-    343 résultats affichés / 347
-      ALL expect 
-    Handel: Music for the Royal Fireworks (Original Version 1749)
-    Armada: Music from the Courts of England and Spain
-    Purcell: Music for the Queen Mary
-    Mozart: Chamber Music
 
 5. Récupérer tous les albums écrits par AC/DC
 
@@ -183,24 +173,5 @@ Réponse obtenue
 
 Requête SQL
 
-    SELECT 
-      artists.Name,
-      tracks.Name
-    FROM albums, artists, tracks
-    WHERE
-      albums.ArtistId = artists.ArtistId AND
-      artists.Name = 'Nirvana' and
-      (tracks.Name = 'Drain You' or
-      tracks.Name = 'Smells Like Teen Spirit' or
-      tracks.Name = 'Polly' or
-      tracks.Name = 'Come As You Are' or
-      tracks.Name = 'On A Plain')
-    GROUP BY tracks.Name
+    INSERT INTO albums (AlbumId, Title, ArtistId) VALUES(348, "BLABLA", XXX);
 
-Réponse obtenue
-
-    Nirvana Come As You Are
-    Nirvana Drain You
-    Nirvana On A Plain
-    Nirvana Polly
-    Nirvana Smells Like Teen Spirit
