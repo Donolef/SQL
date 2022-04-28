@@ -118,7 +118,7 @@ Requête SQL
       albums.ArtistId = artists.ArtistId AND
       artists.Name = 'AC/DC' AND
       albums.AlbumId = tracks.AlbumId
-      albums.AlbumId = 4 dans WHERE
+      albums.AlbumId = 4
 
 Réponse obtenue
 
@@ -173,5 +173,9 @@ Réponse obtenue
 
 Requête SQL
 
-    INSERT INTO albums (AlbumId, Title, ArtistId) VALUES(348, "BLABLA", XXX);
+    INSERT INTO albums (AlbumId, Title, ArtistId) VALUES(348, "(What's the Story) Morning Glory?", 276);
+    INSERT INTO artists (ArtistId, Name) VALUES(276, "OASIS");
+    INSERT INTO tracks (TrackId, Name, AlbumId, MediaTypeID, GenreID, Composer, Milliseconds, Bytes, UnitPrice) VALUES(3504, "Hello", 348, 0, 0, "Noel Gallagher", 201000, 0, 0.00);
+    INSERT INTO tracks (TrackId, Name, AlbumId, MediaTypeID, GenreID, Composer, Milliseconds, Bytes, UnitPrice) VALUES(3505, "Roll with It", 348, 0, 0, "Noel Gallagher", 201000, 0, 0.00);
+    INSERT INTO tracks (TrackId, Name, AlbumId, MediaTypeID, GenreID, Composer, Milliseconds, Bytes, UnitPrice) VALUES(3506, "Wonderwall", 348, 0, 0, "Noel Gallagher", 201000, 0, 0.00);
 
